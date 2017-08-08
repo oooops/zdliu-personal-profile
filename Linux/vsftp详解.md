@@ -1,9 +1,7 @@
 
 # vsftp详解
-----
 
 ## 安装
-----
  查看是否安装vsftp
 ``` js
 rpm -qa | grep vsftpd
@@ -53,7 +51,7 @@ rpm -qa | grep vsftpd
 
 
 ## 配置文件参数
-----
+
 #### 配置文件
 * vsftpd.ftpusers：位于/etc目录下。它指定了哪些用户账户不能访问FTP服务器，例如root等。 
 * vsftpd.user_list：位于/etc目录下。该文件里的用户账户在默认情况下也不能访问FTP服务器，仅当vsftpd .conf配置文件里启用userlist_enable=NO选项时才允许访问。 
@@ -109,7 +107,6 @@ userlist_file=/etc/vsftpd/allowed_users
 ```
 
 ## ftp用户管理
-----
  
 　　# groupadd ftpUser  创建用户组
 
