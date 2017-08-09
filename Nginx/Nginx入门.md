@@ -1,5 +1,12 @@
 # Nginx入门
 
+## Nginx命令
+* nginx            # 启动Nginx
+* nginx -s reload            # 重新载入配置文
+* nginx -s reopen            # 重启 Nginx
+* nginx -s stop              # 停止 Nginx
+* ps -ef | grep nginx        # 查看 Nginx进程
+
 ## 静态HTTP服务器
 首先，Nginx是一个HTTP服务器，可以将服务器上的静态文件（如HTML、图片）通过HTTP协议展现给客户端。
 
