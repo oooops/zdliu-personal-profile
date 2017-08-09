@@ -181,10 +181,21 @@ rpm -qa | grep vsftpd
   
  # 被动模式最大端口
  pasv_max_port=6000
+ 
+
   
  ######### 其他设置 ###########
  # 欢迎信息
  ftpd_banner=Welcome to Ftp Server!
+ 
+ #注意：这个地方如果不配置，就会出现只有root用户可以登陆，普通用户不可以
+ check_shell=NO
+ 
+ #注意：这个不配置有可能出现只能下载不能上传
+ allow_writeable_chroot=YES
+ 
+ #注意：该选项不配置可能导致莫名其妙的530问题
+ seccomp_sandbox=NO
  
 ```
 
