@@ -1,25 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <style>
+    blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+      margin: 0;
+      padding: 0
+    }
+
+    body, button, input, select, textarea {
+      font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 100%
+    }
+
+    address, cite, dfn, em, var {
+      font-style: normal
+    }
+
+    code, kbd, pre, samp {
+      font-family: courier new, courier, monospace
+    }
+
+    small {
+      font-size: 12px
+    }
+
+    ol, ul {
+      list-style: none
+    }
+
+    a {
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: underline
+    }
+
+    sup {
+      vertical-align: text-top
+    }
+
+    sub {
+      vertical-align: text-bottom
+    }
+
+    legend {
+      color: #000
+    }
+
+    fieldset, img {
+      border: 0
+    }
+
+    button, input, select, textarea {
+      font-size: 100%
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+  </style>
 </head>
 <body>
+<div id="divParent" style="padding: 500px; background-color: #aaa; position: relative;">
+  <div style="margin: 20px;padding: 20px;border: 20px solid saddlebrown;width: 330px;position: relative">
+    <div id="divDisplay" style="background-color: #0f0; margin: 30px; padding: 10px;
+            height: 200px; width: 200px; border: solid 3px #f00;">
+    </div>
+  </div>
 
-<div style="width: 400px;height: 400px;margin:0 auto;background-color: antiquewhite;cursor: pointer" id="test"></div>
-
+</div>
 </body>
 <script type="text/javascript">
+  var div = document.getElementById('divDisplay');
 
-  var ss = document.getElementById('test')
+  var clientHeight = div.clientHeight;
+  var clientWidth = div.clientWidth;
+  div.innerHTML += 'clientHeight: ' + clientHeight + '<br/>';
+  div.innerHTML += 'clientWidth: ' + clientWidth + '<br/>';
 
+  var clientLeft = div.clientLeft;
+  var clientTop = div.clientTop;
+  div.innerHTML += 'clientLeft: ' + clientLeft + '<br/>';
+  div.innerHTML += 'clientTop: ' + clientTop + '<br/>';
 
-  ss.addEventListener('click',function () {
-    console.log(22)
-  },false)
-  ss.addEventListener('click',function () {
-    console.log(11)
-  },true)
+  var offsetHeight = div.offsetHeight;
+  var offsetWidth = div.offsetWidth;
+  div.innerHTML += 'offsetHeight: ' + offsetHeight + '<br/>';
+  div.innerHTML += 'offsetWidth: ' + offsetWidth + '<br/>';
 
+  var offsetLeft = div.offsetLeft;
+  var offsetTop = div.offsetTop;
+  div.innerHTML += 'offsetLeft: ' + offsetLeft + '<br/>';
+  div.innerHTML += 'offsetTop: ' + offsetTop + '<br/>';
+
+  var offsetParent = div.offsetParent;
+  div.innerHTML += 'offsetParent: ' + offsetParent.id + '<br/>';
 </script>
 </html>
