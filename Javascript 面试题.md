@@ -1,5 +1,6 @@
-# Javascript 面试题
-#javascript/面试
+
+
+#j）（avascript/面试
 
 ## const
 `const a = []`  a 能改变么，能为什么？
@@ -272,9 +273,9 @@ Firefox 打开控制台会有提示你不要复制任何不信任的代码
 
 相关头设置
 * last-modified 根据文件修改时间。Last-Modified 存在一定问题，如果在服务器上，一个资源被修改了，但其实际内容根本没发生改变，会因为Last-Modified时间匹配不上而返回了整个实体给客户端（即使客户端缓存里有个一模一样的资源）。
-	* If-Modified-Since
+  * If-Modified-Since
 * etag 自定义校验令牌，一般是文件 md5。如果是 cdn，每个服务的文件算法需要保持一致，才能保证cdn缓存
-	*  If-None-Match: ETag-value ， 这个字段表明是否有相应etag，则304，如果
+  *  If-None-Match: ETag-value ， 这个字段表明是否有相应etag，则304，如果
 
 ### Ctrl+F5
 
@@ -290,7 +291,7 @@ Firefox 打开控制台会有提示你不要复制任何不信任的代码
 `position`  会脱离文档流，也就是 dom 树，在脱离的那一刻，会重排一次，所以没有 transform 性能那么好
 
 1. 问题一：一个 position absolute 里面有一个 position absolute，重排了几次
-答： 两次，因为外面的 position 也会维护着一个 dom 树，里面再有 position absolute 还是会继续重排 
+  答： 两次，因为外面的 position 也会维护着一个 dom 树，里面再有 position absolute 还是会继续重排 
 
 
 

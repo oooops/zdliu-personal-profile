@@ -6,22 +6,20 @@
 </head>
 <body>
 
+<div style="width: 400px;height: 400px;margin:0 auto;background-color: antiquewhite;cursor: pointer" id="test"></div>
+
 </body>
 <script type="text/javascript">
 
-  function Person (name) {
-    this.name = name || '这是父类';
-    this.sleep = function () {
-      console.log(this.name + '正在睡觉！');
-    }
-  }
-  // 原型方法
-  Person.prototype.eat = function (food) {
-    console.log(this.name + '正在吃：' + food);
-  };
-  function Cat () {
-  }
-  Cat.prototype = new Person();
+  var ss = document.getElementById('test')
+
+
+  ss.addEventListener('click',function () {
+    console.log(22)
+  },false)
+  ss.addEventListener('click',function () {
+    console.log(11)
+  },true)
 
 </script>
 </html>
