@@ -16,7 +16,7 @@
         snap = document.getElementById('tack'),
         img = document.getElementById('img'),
         vendorUrl = window.URL || window.webkitURL;
-        
+       
     //媒体对象
     navigator.getMedia = navigator.getUserMedia ||
                          navagator.webkitGetUserMedia ||
@@ -34,10 +34,8 @@
         console.log(error);
     });
     snap.addEventListener('click', function(){
-    
         //绘制canvas图形
         canvas.getContext('2d').drawImage(video, 0, 0, 400, 300);
-        
         //把canvas图像转为img图片
         img.src = canvas.toDataURL("image/png");
         
